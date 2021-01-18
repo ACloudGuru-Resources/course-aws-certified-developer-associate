@@ -1,1 +1,0 @@
-This folder contains the resources for the Cognito Demo, where we will build a Facts Of the Day website, which uses Cognito to allow unuathenticated access to a DynamoDB table.
