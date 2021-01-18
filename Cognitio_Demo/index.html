@@ -1,0 +1,63 @@
+<html>
+<style type="text/css">
+    .btn {
+        background-color:#F7F375;
+        height:60px;
+	    width:250px;
+        cursor:pointer;
+    }
+    body {
+background-color: #D4E5F1
+}
+</style>
+
+	<head>
+    </head>
+    
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+<body>
+	<div align="center">
+		<br>
+		<br>
+		<h1> Hello Cloud Gurus! </h1>
+		<h2>Welcome to the Fact of The Day Generator!</h2> 
+		<br>
+		<img src="fact.jpg" width="600" height="350">
+		<br>
+		<br>
+		<button class="btn" onclick="readItem()">Click here learn an awesome fact!</button>
+		<script>
+
+AWS.config.region = 'us-east-1';
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+IdentityPoolId: "us-east-1:65c16310-6ed5-404a-ba9b-71cd1dbf1999",
+RoleArn: "arn:aws:iam::xxxxxxxx:role/Cognito_DynamoPoolUnauth"
+});
+
+function readItem() {
+var docClient = new AWS.DynamoDB.DocumentClient({ region: 'us-east-1' });
+var table = "facts";
+var params = {
+        TableName: table,
+        Key:{
+            "fact_id": Math.floor((Math.random() * 16) + 1),
+        }
+    };
+    docClient.get(params, function(err, data) {
+        if (err) {
+            document.getElementById('demo').innerHTML = "Unable to read item: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+    	    var string=JSON.stringify(data);
+            var output=string.split("\"");
+            document.getElementById('demo').innerHTML = output[5];
+        }
+    });
+}
+		</script>
+
+<h1> <span id="demo"> </span></h1>
+		<br>	
+	</div>
+	</body>
+</html>
