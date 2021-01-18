@@ -1,0 +1,132 @@
+{
+    "facts": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "1"},
+       				"fact": {"S": "Despite only being 3% of your body weight, the Brain consumes about 20% of your calorie intake... For some people it's probably less though!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "2"},
+       				"fact": {"S": "In 2019 more people were killed from injuries caused by taking a selfie than by shark attacks. I hope this is not true."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "3"},
+       				"fact": {"S": "Fortune cookies are not Chinese, they were invented in the early 1900’s in San Francisco."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "4"},
+       				"fact": {"S": "French fries originated in Belgium, not France."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "5"},
+       				"fact": {"S": "Humans DNA is 60% the same as bananas. According to the internet."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "6"},
+       				"fact": {"S": "The most expensive pizza in the world costs $12,000 dollars, takes 3 chefs to prepare and is topped with 3 types of caviar and lobster. - Is this true? We don't know!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "7"},
+       				"fact": {"S": "Vincent van Gogh only sold one painting in his lifetime."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "8"},
+       				"fact": {"S": "It’s impossible to hum while holding your nose. (Try it! This one is actually true!)"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "9"},
+       				"fact": {"S": "Marmite was one of most confiscated items at airports from the U.K. – to overcome this issue, Marmite made a smaller size just for traveling, resulting in many happy Brits!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "10"},
+       				"fact": {"S": "Sunsets on Mars are blue."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "11"},
+       				"fact": {"S": "The brain is our fattiest organ, being composed of nearly 60% fat."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "12"},
+       				"fact": {"S": "The tea-bag was an accidental invention. This occurred in 1908 when tea merchant Thomas Sullivan distributed his tea samples in small, silken bags. His customers, not understanding that these were samples, dunked them and suddenly Sullivan was swamped with orders for his ‘tea bags’!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "13"},
+       				"fact": {"S": "A Dachshund (a.k.a. a sausage dog) was originally bred to hunt in low, narrow badger burrows. In fact, the term ‘Dachshund’ translates from German as ‘badger dog’!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "14"},
+       				"fact": {"S": "The Eiffel Tower is made of iron and due to heat expansion in the summer sun, the Tower can grow in height by up to 6 inches!"}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "15"},
+       				"fact": {"S": "Beer was classified as a soft drink in Russia until 2011. This is because anything with less than 10% alcohol was classified legally as a soft drink."}    				
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "fact_id": {"N": "16"},
+       				"fact": {"S": "The first meal to be eaten on the moon by the Apollo 11 crew was bacon and coffee. (If you choose to believe the moon landings actually happened.)"} 
+                }
+            }
+        }
+    ]
+}
