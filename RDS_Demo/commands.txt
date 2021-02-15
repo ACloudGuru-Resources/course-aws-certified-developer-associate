@@ -1,0 +1,12 @@
+1) Check mysql has installed:
+mysql --version
+
+2) Connect to your database using your endpoint (specify your own endpoint):
+mysql -u acloudguru -p -h <YOUR_RDS_ENDPOINT> acloudguru
+
+3) Check the status of your database:
+status
+show databases;
+
+4) Quit the database connection:
+exit
