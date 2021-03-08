@@ -1,0 +1,34 @@
+{
+    "SessionData": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "UserID": {"N": "5346747"},
+       				"CreationTime": {"N": "1544016418"},
+    				"ExpirationTime": {"N": "1544140800"},
+   					"SessionId": {"N": "6734678235789"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "UserID": {"N": "6478533"},
+       				"CreationTime": {"N": "1544013196"},
+    				"ExpirationTime": {"N": "1544140800"},
+   					"SessionId": {"N": "6732672579220"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "UserID": {"N": "7579645"},
+       				"CreationTime": {"N": "1544030827"},
+    				"ExpirationTime": {"N": "1544140800"},
+   					"SessionId": {"N": "7657687845893"}
+                }
+            }
+        }
+    ]
+}
