@@ -1,0 +1,21 @@
+1) Check your IAM user permissions:
+
+aws iam get-user
+
+2) Creating the SessionData table:
+
+***LINUX or MAC USERS***:
+aws dynamodb create-table --table-name SessionData --attribute-definitions \
+AttributeName=UserID,AttributeType=N --key-schema \
+AttributeName=UserID,KeyType=HASH \
+--provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+
+***WINDOWS USERS*** - Please replace \ with ^ (Shift+6) as follows:
+aws dynamodb create-table --table-name SessionData --attribute-definitions ^
+AttributeName=UserID,AttributeType=N --key-schema ^
+AttributeName=UserID,KeyType=HASH ^
+--provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+
+3) Populate SessionData Table:
+
+aws dynamodb batch-write-item --request-items file://items.json
