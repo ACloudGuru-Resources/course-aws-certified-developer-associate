@@ -1,0 +1,31 @@
+1) Pre-requisties: 
+
+# See the following documentation if you are running Windows or Linux: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
+
+# On MacOS, Install Homebrew and the SAM CLI::
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew --version
+
+# Install SAM CLI
+brew tap aws/tap
+brew install aws-sam-cli
+sam --version
+
+2) Create an S3 bucket: 
+aws s3 mb s3://cfsambucket --region eu-west-2  #use the bucket name and region name of your choice - it must match the default region that you are working in. 
+
+3) Package your deployment: 
+
+sam package \
+--template-file ./lambda.yml \
+--output-template-file sam-template.yml \
+--s3-bucket cfsambucket
+
+#use the bucket name you used in the previous step
+
+4) Deploy your package: 
+
+sam deploy \
+--template-file sam-template.yml \
+--stack-name mystack \
+--capabilities CAPABILITY_IAM
