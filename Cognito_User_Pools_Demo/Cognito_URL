@@ -1,0 +1,1 @@
+<Your Cognito Domain>/login?response_type=token&client_id=<Your App Client ID>&redirect_uri=https://example.com
