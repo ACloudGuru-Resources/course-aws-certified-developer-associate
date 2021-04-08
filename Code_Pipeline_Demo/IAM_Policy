@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "cloudformation:*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*"
+        },
+        {
+            "Action": "ec2:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}
