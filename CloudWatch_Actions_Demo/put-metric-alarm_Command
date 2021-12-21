@@ -1,0 +1,3 @@
+After modifying and running the script, create an alarm that will be triggered if more than 1 CriticalError data point is received by CloudWatch within any time period of 5 minutes:
+
+aws cloudwatch put-metric-alarm --alarm-name CriticalErrorMon --alarm-description "CriticalError Monitor" --metric-name CriticalError --namespace MyService --statistic SampleCount --period 300 --threshold 1 --comparison-operator GreaterThanThreshold --evaluation-periods 1
