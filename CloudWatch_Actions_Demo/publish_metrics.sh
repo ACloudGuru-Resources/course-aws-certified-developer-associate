@@ -1,4 +1,5 @@
 #!/bin/bash
+# update the timestamp to today's date and an appropriate time using the following format YYYY-MM-DD HH:MM:SS
 aws cloudwatch put-metric-data --metric-name CriticalError --namespace MyService --value 1 --timestamp 2021-12-21T11:05:00.000Z 
 aws cloudwatch put-metric-data --metric-name CriticalError --namespace MyService --value 1 --timestamp 2021-12-21T11:06:00.000Z 
 aws cloudwatch put-metric-data --metric-name CriticalError --namespace MyService --value 1 --timestamp 2021-12-21T11:07:00.000Z
