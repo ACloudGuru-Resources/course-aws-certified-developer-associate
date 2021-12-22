@@ -8,7 +8,7 @@
     "WebServerInstance": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "InstanceType": "t3.micro",
+        "InstanceType": "t2.micro",
         "ImageId": "ami-0ed9277fb7eb570c9",
         "NetworkInterfaces": [
           {
