@@ -1,0 +1,37 @@
+1) Create a domain:
+aws codeartifact create-domain --domain my-domain
+JSON-formatted data appears in the output with details about your new domain.
+
+2) Create a repository in your domain:
+aws codeartifact create-repository --domain my-domain --repository my-repo
+
+3) Create an upstream repository for your my-repo repository:
+aws codeartifact create-repository --domain my-domain --repository npm-store
+
+4) Add an external connection to the npm public repository to your npm-store repository:
+aws codeartifact associate-external-connection --domain my-domain --repository npm-store --external-connection "public:npmjs"
+
+5) Associate the npm-store repository as an upstream repository to the my-repo repository:
+aws codeartifact update-repository --repository my-repo --domain my-domain --upstreams repositoryName=npm-store
+
+6) Configure the npm package manager with your my-repo repository (fetches an authorization token from CodeArtifact using your AWS credentials):
+aws codeartifact login --tool npm --repository my-repo --domain my-domain
+
+7) Use the npm CLI to install an npm package. For example, to install the popular npm package express, use the following command, if we don’t specify a version, this command will install the latest version available in the external repo:
+npm install express
+
+(express is a Node.js web application framework used to develop web and mobile applications)
+
+8) View the package you just installed in your my-repo repository:
+aws codeartifact list-packages --domain my-domain --repository my-repo
+
+
+You now have three CodeArtifact resources:
+* The domain my-domain.
+* The repository my-repo that is contained in my-domain. This repository has an npm package available to it.
+* The repository npm-store that is contained in my-domain. This repository has an external connection to the public npm repository and is associated as an upstream repository with the my-repo repository. 
+
+9) To avoid further AWS charges, delete the resources you created:
+aws codeartifact delete-repository --domain my-domain --repository my-repo
+aws codeartifact delete-repository --domain my-domain --repository npm-store
+aws codeartifact delete-domain --domain my-domain
