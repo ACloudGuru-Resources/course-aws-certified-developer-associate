@@ -61,7 +61,7 @@
   "Mappings": {
     "RegionOS2AMI": {
       "us-east-1": {
-        "Linux": "ami-0022f774911c1d690",
+        "Linux": "ami-0080e4c5bc078760e",
         "Windows": "ami-0204606704df03e7e"
       },
       "us-west-2": {
