@@ -61,7 +61,7 @@
   "Mappings": {
     "RegionOS2AMI": {
       "us-east-1": {
-        "Linux": "ami-0080e4c5bc078760e",
+        "Linux": "ami-0022f774911c1d690",
         "Windows": "ami-0204606704df03e7e"
       },
       "us-west-2": {
@@ -217,6 +217,8 @@
                 "#!/bin/bash -ex\n",
                 "yum update -y aws-cfn-bootstrap\n",
                 "yum install -y aws-cli\n",
+                "yum install -y ruby\n",
+                "yum install -y wget\n",
                 "# Helper function.\n",
                 "function error_exit\n",
                 "{\n",
@@ -229,8 +231,9 @@
                 "}\n",
                 "# Install the AWS CodeDeploy Agent.\n",
                 "cd /home/ec2-user/\n",
-                "aws s3 cp 's3://aws-codedeploy-us-east-1/latest/codedeploy-agent.noarch.rpm' . || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
-                "yum -y install codedeploy-agent.noarch.rpm || error_exit 'Failed to install AWS CodeDeploy Agent.' \n",
+                "wget 'https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install' || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
+                "chmod +x ./install\n",
+                "./install auto || error_exit 'Failed to install AWS CodeDeploy Agent.'\n",
                 "/opt/aws/bin/cfn-init -s ",
                 {
                   "Ref": "AWS::StackId"
@@ -600,6 +603,8 @@
                 "#!/bin/bash -ex\n",
                 "yum update -y aws-cfn-bootstrap\n",
                 "yum install -y aws-cli\n",
+                "yum install -y ruby\n",
+                "yum install -y wget\n",
                 "# Helper function.\n",
                 "function error_exit\n",
                 "{\n",
@@ -612,8 +617,9 @@
                 "}\n",
                 "# Install the AWS CodeDeploy Agent.\n",
                 "cd /home/ec2-user/\n",
-                "aws s3 cp 's3://aws-codedeploy-us-east-1/latest/codedeploy-agent.noarch.rpm' . || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
-                "yum -y install codedeploy-agent.noarch.rpm || error_exit 'Failed to install AWS CodeDeploy Agent.' \n",
+                "wget 'https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install' || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
+                "chmod +x ./install\n",
+                "./install auto || error_exit 'Failed to install AWS CodeDeploy Agent.'\n",
                 "/opt/aws/bin/cfn-init -s ",
                 {
                   "Ref": "AWS::StackId"
@@ -812,6 +818,8 @@
                 "#!/bin/bash -ex\n",
                 "yum update -y aws-cfn-bootstrap\n",
                 "yum install -y aws-cli\n",
+                "yum install -y ruby\n",
+                "yum install -y wget\n",
                 "# Helper function.\n",
                 "function error_exit\n",
                 "{\n",
@@ -824,8 +832,9 @@
                 "}\n",
                 "# Install the AWS CodeDeploy Agent.\n",
                 "cd /home/ec2-user/\n",
-                "aws s3 cp 's3://aws-codedeploy-us-east-1/latest/codedeploy-agent.noarch.rpm' . || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
-                "yum -y install codedeploy-agent.noarch.rpm || error_exit 'Failed to install AWS CodeDeploy Agent.' \n",
+                "wget 'https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install' || error_exit 'Failed to download AWS CodeDeploy Agent.'\n",
+                "chmod +x ./install\n",
+                "./install auto || error_exit 'Failed to install AWS CodeDeploy Agent.'\n",
                 "/opt/aws/bin/cfn-init -s ",
                 {
                   "Ref": "AWS::StackId"
