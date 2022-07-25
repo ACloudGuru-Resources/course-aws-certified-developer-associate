@@ -1,6 +1,5 @@
 1) Create a domain:
 aws codeartifact create-domain --domain my-domain
-JSON-formatted data appears in the output with details about your new domain.
 
 2) Create a repository in your domain:
 aws codeartifact create-repository --domain my-domain --repository my-repo
@@ -29,7 +28,7 @@ aws codeartifact list-packages --domain my-domain --repository my-repo
 You now have three CodeArtifact resources:
 * The domain my-domain.
 * The repository my-repo that is contained in my-domain. This repository has an npm package available to it.
-* The repository npm-store that is contained in my-domain. This repository has an external connection to the public npm repository and is associated as an upstream repository with the my-repo repository. 
+* The repository npm-store that is contained in my-domain. This repository has an external connection to the public npm repository and is associated as an upstream repository with the my-repo repository.
 
 9) To avoid further AWS charges, delete the resources you created:
 aws codeartifact delete-repository --domain my-domain --repository my-repo
