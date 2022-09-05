@@ -1,7 +1,9 @@
 Run all the commands using the AWS CloudShell, it already has the AWS CLI, SAM CLI and Git installed. 
 
 1) Copy hello-from-lambda.js and template.yml to the CloudShell:
-curl -O <raw path to file>
+curl -O https://raw.githubusercontent.com/ACloudGuru-Resources/course-aws-certified-developer-associate/main/CloudFormation_SAM_Demo/hello-from-lambda.js
+
+curl -O 
 
 2) Create an S3 bucket:
 aws s3 mb s3://cfsambucket35
