@@ -1,4 +1,4 @@
-Run all the commands using the AWS CloudShell, it already has the AWS CLI, SAM CLI and Git installed. 
+Run all the commands using the AWS CloudShell, it already has the AWS CLI, SAM CLI installed. 
 
 1) Copy hello-from-lambda.js and template.yml to the CloudShell:
 curl -O https://raw.githubusercontent.com/ACloudGuru-Resources/course-aws-certified-developer-associate/main/CloudFormation_SAM_Demo/hello-from-lambda.js
