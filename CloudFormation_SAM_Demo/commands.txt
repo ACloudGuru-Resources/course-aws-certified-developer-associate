@@ -9,7 +9,7 @@ curl -O https://raw.githubusercontent.com/ACloudGuru-Resources/course-aws-certif
 aws s3 mb s3://cfsambucket
 
 3) Package the files and save them to the S3 bucket you just created:
-sam package --template-file template.yml --output-template-file sam-template.yml --s3-bucket cfsambucket35
+sam package --template-file template.yml --output-template-file sam-template.yml --s3-bucket cfsambucket
 
 4) Deploy the code: 
 sam deploy --template-file sam-template.yml --stack-name mystack --capabilities CAPABILITY_IAM
