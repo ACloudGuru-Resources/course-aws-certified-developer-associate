@@ -5,8 +5,8 @@ curl -O https://raw.githubusercontent.com/ACloudGuru-Resources/course-aws-certif
 
 curl -O https://raw.githubusercontent.com/ACloudGuru-Resources/course-aws-certified-developer-associate/main/CloudFormation_SAM_Demo/template.yml
 
-2) Create an S3 bucket:
-aws s3 mb s3://cfsambucket35
+2) Create an S3 bucket (add some random numbers to the bucket name to create a unique name):
+aws s3 mb s3://cfsambucket
 
 3) Package the files and save them to the S3 bucket you just created:
 sam package --template-file template.yml --output-template-file sam-template.yml --s3-bucket cfsambucket35
