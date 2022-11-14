@@ -26,7 +26,7 @@ aws iam get-role --role-name Cognito_DynamoPoolUnauth --output json
 
 aws cognito-identity set-identity-pool-roles \
 --identity-pool-id "us-east-1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
---roles unauthenticated=arn:aws:iam::xxxxx:role/Cognito_DynamoPoolUnauthRole --output json
+--roles unauthenticated=arn:aws:iam::xxxxx:role/Cognito_DynamoPoolUnauth --output json
 
 6) Double check it worked using: 
 
@@ -39,6 +39,6 @@ We are going to add this snippet to our index.html:
 
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 IdentityPoolId: "us-east-1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-RoleArn: "arn:aws:iam::xxxxx:role/Cognito_DynamoPoolUnauthRole"
+RoleArn: "arn:aws:iam::xxxxx:role/Cognito_DynamoPoolUnauth"
 });
 
