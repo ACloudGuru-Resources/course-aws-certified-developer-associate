@@ -1,4 +1,4 @@
-Run all commnds using the CloudShell: 
+Run all commands using the CloudShell: 
 1. Install the latest version of the CDK, and update to the latest version of TypeScript. :
 sudo npm install -g aws-cdk
 sudo npm update -g typescript
