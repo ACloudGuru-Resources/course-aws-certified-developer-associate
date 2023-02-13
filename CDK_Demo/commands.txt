@@ -9,7 +9,7 @@ cd myapp
 cdk init sample-app --language=typescript
 
 3. Check your files have been successfully created, the following files should be present in your directory: bin  cdk.json  jest.config.js  lib  node_modules  package.json  package-lock.json  README.md  test  tsconfig.json
-The file that contains the details of the stack and its constructs is lib/cdk-init-stack.ts : 
+The file that contains the details of the stack and its constructs is lib/cdk-init-stack.ts. The cdk.json file tells CDK how to execute your app : 
 ls
 
 4. Manually compile the app:
