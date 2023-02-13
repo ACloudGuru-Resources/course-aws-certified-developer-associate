@@ -16,7 +16,7 @@ ls
 npm run build
 cdk ls (to check - the name of our app’s directory is the name of the stack)
 
-5. Synthesise a CloudFormation template written in YAML:
+5. Synthesise a CloudFormation template:
 cdk synth
 
 (It stores the template in cdk.out folder)
