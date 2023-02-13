@@ -1,0 +1,31 @@
+Run all commnds using the CloudShell: 
+1. Install the latest version of the CDK, and update to the latest version of TypeScript. :
+sudo npm install -g aws-cdk
+sudo npm update -g typescript
+
+2. Initialize a sample app using a language of our choice - e.g. typescript. :
+mkdir myapp
+cd myapp
+cdk init sample-app --language=typescript
+
+3. Check your files have been successfully created, the following files should be present in your directory: bin  cdk.json  jest.config.js  lib  node_modules  package.json  package-lock.json  README.md  test  tsconfig.json
+The file that contains the details of the stack and its constructs is lib/cdk-init-stack.ts : 
+ls
+
+4. Manually compile the app:
+npm run build
+cdk ls (to check - the name of our app’s directory is the name of the stack)
+
+5. Synthesise a CloudFormation template written in YAML:
+cdk synth
+
+(It stores the template in cdk.out folder)
+
+6. Deploy the stack: 
+(Before we deploy we need to run the bootstrap commend. This is to provision required resources for CDK before we can deploy CDK apps into an AWS account and Region - an S3 bucket to store files and IAM roles with permission to perform deployments.)
+
+cdk bootstrap 
+cdk deploy
+
+
+7. In the console, check CloudFormation, review our stack - there should be an SQS Queue, and an SNS Topic. 
