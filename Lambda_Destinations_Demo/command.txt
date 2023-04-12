@@ -1,0 +1,1 @@
+aws lambda invoke --function-name myfunction --invocation-type Event response.json
