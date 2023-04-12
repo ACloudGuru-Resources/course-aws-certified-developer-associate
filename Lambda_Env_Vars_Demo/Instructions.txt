@@ -1,0 +1,4 @@
+Create the following environment variables in yout Lambda function, the code is case sensitive, so enter them exactly as below : 
+
+1. enableExclamationPoints True 
+2. numberOfExclamationPoints 10
