@@ -1,0 +1,4 @@
+Example command to configure permissions for API Gateway to invoke your function, you will need to replace the function ARN with your own function ARN, and the API Gateway ARN with your own API Gateway ARN. Run the command once for MyProdFunction, and again for MyDevFunction. 
+
+
+aws lambda add-permission --function-name "arn:aws:lambda:us-east-1:0123456789:function:MyProdFunction" --source-arn "arn:aws:execute-api:us-east-1:0123456789:vowpvvuhl6/*/GET/" --principal apigateway.amazonaws.com --statement-id 7113cd4f-2784-4482-807a-c1aaeb187b32 --action lambda:InvokeFunction
