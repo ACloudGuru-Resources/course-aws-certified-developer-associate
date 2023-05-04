@@ -1,4 +1,4 @@
-***** Please note that if the command prompt does not appear after running any of these commands, type the letter q in the CloudShell, your prompt will return and you can enter the next command **** 
+***** Please note that if the command seems to hang and the command prompt does not reappear after running any of these commands, type the letter q in the CloudShell, your prompt will return and you can continue entering the next command **** 
 
 1) Create a domain:
 aws codeartifact create-domain --domain my-domain
@@ -37,4 +37,4 @@ aws codeartifact delete-repository --domain my-domain --repository my-repo
 aws codeartifact delete-repository --domain my-domain --repository npm-store
 aws codeartifact delete-domain --domain my-domain
 
-***** Please note that if the command prompt does not appear after running any of these commands, type the letter q in the CloudShell, your prompt will return and you can enter the next command **** 
+***** Please note that if the command seems to hang and the command prompt does not reappear after running any of these commands, type the letter q in the CloudShell, your prompt will return and you can continue entering the next command **** 
