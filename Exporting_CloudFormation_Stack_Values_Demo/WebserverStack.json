@@ -8,8 +8,8 @@
     "WebServerInstance": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "InstanceType": "t2.micro",
-        "ImageId": "ami-0ed9277fb7eb570c9",
+        "InstanceType": "t3.micro",
+        "ImageId": "ami-0889a44b331db0194",
         "NetworkInterfaces": [
           {
             "GroupSet": [
