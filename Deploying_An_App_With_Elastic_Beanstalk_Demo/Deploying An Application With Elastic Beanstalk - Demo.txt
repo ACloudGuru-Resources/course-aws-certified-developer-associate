@@ -1,0 +1,42 @@
+# Deploying An Application With Elastic Beanstalk - Demo
+# https://learn.acloud.guru/course/aws-certified-developer-associate/learn/d36a1363-452a-8007-e874-54f19b10c0b7/baf22738-24ef-2c52-39e1-9576859a3e64/watch
+
+# To create your example application, you'll use the 'Create application' console wizard. It creates an Elastic Beanstalk application and launches an environment within it. An environment is the collection of AWS resources required to run your application code.
+
+# To create a service role for Elastic Beanstalk:
+
+1. Open the Identity and Access Management (IAM) console.
+2. Click 'Roles'.
+3. Click 'Create role'.
+4. Under 'Use cases for other AWS services', choose 'Elastic Beanstalk', select 'Elastic Beanstalk - Customizable', and click 'Next'.
+5. Click 'Next'.
+6. For 'Role name', type 'CustomServiceRoleForElasticBeanstalk'.
+7. Click 'Create role'.
+
+# To create an EC2 instance profile for Elastic Beanstalk:
+
+1. Open the Identity and Access Management (IAM) console.
+2. Click 'Roles'.
+3. Click 'Create role'.
+4. Under 'Common use cases', choose 'EC2'.
+5. Click 'Next'.
+6. Select the 'AWSElasticBeanstalkReadOnly' policy name.
+7. Click 'Next'.
+8. For 'Role name', type 'CustomEC2InstanceProfileForElasticBeanstalk'.
+9. Click 'Create role'.
+
+# To create an example application:
+
+1. Open the Elastic Beanstalk console.
+2. Click 'Create application'.
+3. For Application name enter 'Hello Cloud Gurus'.
+4. For Platform, choose 'PHP'.
+5. Under 'Application code', select 'Upload your code', type 'v1' under 'Version label', select 'Local file' > 'Choose file' and upload the 'aws-cda-EBS_Demo_V1.zip' file available under the RESOURCES section of the lesson. Click 'Next'.
+6. For 'Use an existing service role', choose 'CustomServiceRoleForElasticBeanstalk'.
+7. For 'EC2 instance profile', choose CustomEC2InstanceProfileForElasticBeanstalk'.
+8. Click 'Next'.
+9. On the 'Set up networking, database, and tags - optional' page, click 'Next'.
+10. On the 'Configure instance traffic and scaling - optional' page, click 'Next'.
+11. On the 'Configure updates, monitoring, and logging - optional' page, under 'System' choose 'Basic', and under 'Managed platform updates' > 'Managed updates', uncheck the 'Activated' box. Click 'Next'.
+12. The Review page displays a summary of all your choices. Choose 'Submit' at the bottom of the page.
+13. Wait for the 'Successfully launched environment: HelloCloudGurus-env' event and check the URL available under 'Environment overview' > 'Domain'.
