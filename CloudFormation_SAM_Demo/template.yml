@@ -23,7 +23,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/hello-from-lambda.helloFromLambdaHandler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Architectures:
         - x86_64
       MemorySize: 128
