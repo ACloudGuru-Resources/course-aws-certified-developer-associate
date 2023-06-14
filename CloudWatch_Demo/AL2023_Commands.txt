@@ -10,7 +10,7 @@ systemctl start rsyslog
 systemctl enable rsyslog
 
 3. Install the CW Agent: 
-sudo dnf install amazon-cloudwatch-agent -y
+dnf install amazon-cloudwatch-agent -y
 
 4. Configure the CW agent: 
 /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
@@ -26,5 +26,5 @@ cat config.json
 /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json
 
 7. Generate some activity on our system by installing stress:
-sudo dnf install stress -y
+dnf install stress -y
 stress --cpu 1
