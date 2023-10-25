@@ -1,7 +1,7 @@
-const https = require('https')
+import https from 'https'
 let url = "https://www.amazon.com" 
 
-exports.handler = function(event, context, callback) { 
+export const handler = function(event, context, callback) { 
 	https.get(url, (res) => { 
   		    callback(null, res.statusCode) 	
     	}).on('error', (e) => { 
