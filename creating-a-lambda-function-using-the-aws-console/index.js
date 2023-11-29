@@ -1,10 +1,16 @@
-const https = require('https')
-let url = "https://www.amazon.com" 
+const https = require('https');
+let url = "https://www.amazon.com";
 
-exports.handler = function(event, context, callback) { 
-	https.get(url, (res) => { 
-  		    callback(null, res.statusCode) 	
-    	}).on('error', (e) => { 
-		    callback(Error(e)) 
-	    }) 
-}
+exports.handler = async function(event) {
+    let statusCode;
+    await new Promise(function(resolve, reject) {
+        https.get(url, (res) => {
+            statusCode = res.statusCode;
+            resolve(statusCode);
+        }).on("error", (e) => {
+            reject(Error(e));
+        });
+    });
+    console.log(statusCode);
+    return statusCode;
+};
