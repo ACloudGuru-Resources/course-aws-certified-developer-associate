@@ -5,7 +5,7 @@ region that you are working in.
 WINDOWS users will need to use ^ (Shift + 6) instead of \ for line continuation.
 
 aws cloudformation create-stack --stack-name CodeDeployDemoStack \
---template-url http://s3-eu-west-1.amazonaws.com/cftemplates-faye/CF_Template.json \
+--template-url https://my-cf-template-krishanu.s3.amazonaws.com/CF_Template.json \
 --parameters ParameterKey=InstanceCount,ParameterValue=1 \
 ParameterKey=InstanceType,ParameterValue=t2.micro \
 ParameterKey=KeyPairName,ParameterValue=irkp \
