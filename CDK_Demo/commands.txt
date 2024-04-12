@@ -22,7 +22,7 @@ cdk synth
 (It stores the template in cdk.out folder)
 
 6. Deploy the stack: 
-(Before we deploy we need to run the bootstrap commend. This is to provision required resources for CDK before we can deploy CDK apps into an AWS account and Region - an S3 bucket to store files and IAM roles with permission to perform deployments.)
+(Before we deploy we need to run the bootstrap command. This is to provision required resources for CDK before we can deploy CDK apps into an AWS account and Region - an S3 bucket to store files and IAM roles with permission to perform deployments.)
 
 cdk bootstrap 
 cdk deploy
