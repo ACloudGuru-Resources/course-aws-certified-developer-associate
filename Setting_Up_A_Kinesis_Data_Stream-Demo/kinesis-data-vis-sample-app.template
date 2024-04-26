@@ -37,7 +37,7 @@
       "Type" : "String",
       "MinLength" : "7",
       "MaxLength" : "255",
-      "Default" : "https://github.com/awslabs/amazon-kinesis-data-visualization-sample/releases/download/v1.1.1/amazon-kinesis-data-visualization-sample-1.1.1-assembly.zip"
+      "Default" : "https://github.com/awslabs/amazon-kinesis-data-visualization-sample/releases/download/v1.1.2/amazon-kinesis-data-visualization-sample-1.1.2-assembly.zip"
     }
   },
 
@@ -62,12 +62,12 @@
     },
 
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "64" : "ami-0dfcb1ef8550277af" },
-      "us-west-2"      : { "64" : "ami-0f1a5f5ada0e7da53" },
-      "eu-west-1"      : { "64" : "ami-06e0ce9d3339cb039" },
-      "ap-southeast-1" : { "64" : "ami-0f2eac25772cd4e36" },
-      "ap-southeast-2" : { "64" : "ami-0692dea0a2f8a1b35" },
-      "ap-northeast-1" : { "64" : "ami-0ffac3e16de16665e" }
+      "us-east-1"      : { "64" : "ami-0a1179631ec8933d7" },
+      "us-west-2"      : { "64" : "ami-086f060214da77a16" },
+      "eu-west-1"      : { "64" : "ami-07edc58546d708802" },
+      "ap-southeast-1" : { "64" : "ami-04f73ca9a4310089f" },
+      "ap-southeast-2" : { "64" : "ami-0a4f913c1801e18a2" },
+      "ap-northeast-1" : { "64" : "ami-04e0b6d6cfa432943" }
     }
   },
 
@@ -208,7 +208,7 @@
           "config" : {
             "packages" : {
               "yum" : {
-                "java-1.7.0-openjdk" : []
+                "java-17-amazon-corretto" : []
               }
             },
             "files" : {
