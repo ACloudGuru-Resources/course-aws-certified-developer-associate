@@ -1,9 +1,11 @@
-const https = require('https');
-let url = "https://www.amazon.com";
+import https from 'https';
 
-exports.handler = async function(event) {
+const url = "https://www.amazon.com";
+
+export const handler = async function(event) {
     let statusCode;
-    await new Promise(function(resolve, reject) {
+
+    await new Promise((resolve, reject) => {
         https.get(url, (res) => {
             statusCode = res.statusCode;
             resolve(statusCode);
@@ -11,6 +13,7 @@ exports.handler = async function(event) {
             reject(Error(e));
         });
     });
+
     console.log(statusCode);
     return statusCode;
 };
