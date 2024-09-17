@@ -1,3 +1,4 @@
 #!/bin/bash  
-yum update -y
-yum install mysql -y
+sudo dnf update -y
+sudo dnf install mariadb105-server
+
