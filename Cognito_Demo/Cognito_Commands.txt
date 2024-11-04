@@ -64,7 +64,7 @@ aws iam get-role --role-name Cognito_DynamoPoolUnauth --output json
 11.	Add our role to the Cognito Identity Pool. Replace the identity pool ID with your own identity pool ID and use the role ARN from the previous step.
 
 aws cognito-identity set-identity-pool-roles \
---identity-pool-id "us-east-1:xxxxx” \
+--identity-pool-id "us-east-1:xxxxx" \
 --roles unauthenticated=arn:aws:iam::xxxxx:role/Cognito_DynamoPoolUnauth --output json
 
 12.	Double check it worked - Replace the identity pool ID with your own identity pool ID: 
