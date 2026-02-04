@@ -1,3 +1,3 @@
-#!/bin/bash  
-yum update -y
-yum install mysql -y
+#!/bin/bash
+dnf update -y
+dnf install mariadb105 -y
