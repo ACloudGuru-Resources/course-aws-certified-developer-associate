@@ -7,13 +7,24 @@ Parameters:
     Description: Name of SSH KeyPair
     Type: 'AWS::EC2::KeyPair::KeyName'
     ConstraintDescription: Provide the name of an existing SSH key pair
+  SSHLocation:
+    Description: IP range allowed to SSH to the instance, for example your own IP as x.x.x.x/32
+    Type: String
+    MinLength: 9
+    MaxLength: 18
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    ConstraintDescription: Must be a valid IP CIDR range of the form x.x.x.x/x
+  LatestAmiId:
+    Description: Latest Amazon Linux 2023 AMI, resolved in whichever region the stack is deployed to
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
 
 Resources:
   MyEC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
       InstanceType: t3.micro
-      ImageId: ami-0b5eea76982371e91
+      ImageId: !Ref LatestAmiId
       KeyName: !Ref KeyName
       SecurityGroups:
        - Ref: InstanceSecurityGroup
@@ -25,10 +36,10 @@ Resources:
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
-        IpProtocol: tcp
-        FromPort: 22
-        ToPort: 22
-        CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref SSHLocation
 
 Outputs: 
   InstanceID:
